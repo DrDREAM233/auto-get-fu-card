@@ -26,10 +26,12 @@
 
 - [x] iOS
 - [ ] Android
+- [x] 树莓派等 Linux 设备
+- [x] 手
 
 #### iOS 10 以上版本
 
-1. 在`App Store`里安装`快捷指令`
+1. 在`App Store`里安装 `快捷指令`(就是苹果官方开发的那个)
 
 2. 看图操作
 
@@ -40,7 +42,7 @@
 3. 因为苹果的限制所以必须收到短信的时候点击运行按钮,拉下菜单就看见了
 
 
-### Step2 替换选项: Gammu (适用于树莓派等 Linux 设备)
+### 树莓派等 Linux 设备: Gammu
 如果你身边有 3G/4G 模块，也可以尝试在树莓派等设备上搭建 Gammu 来实现手机上的效果。   
 
 #### 安装&配置 
@@ -63,3 +65,7 @@ sudo nano /etc/gammu-smsdrc
 sudo gammu-smsd --config /etc/gammu-smsdrc --pid /var/run/gammu-smsd.pid --daemon
 ```   
 理论上就可以尝试接收来自支付宝的验证码，领取福卡了。
+
+### 手
+
+打开网址以后获取验证码自己往里输行了
