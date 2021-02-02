@@ -1,4 +1,4 @@
-name: Test auto-get-fu-card(Java with Maven)
+name: Test_auto-get-fu-card
 
 on:
   push:
