@@ -18,7 +18,7 @@ import java.util.concurrent.locks.ReentrantLock;
 @Component
 public class ChromeHelper implements CommandLineRunner {
 
-    private static final String phone = "15371044932";
+    private static final String phone = "00000000000";
 
     public static volatile String code = "000000";
 
