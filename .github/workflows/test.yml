@@ -72,8 +72,8 @@ jobs:
           ${{ runner.os }}-maven-
     - name: Build auto-get-fu-card (with Maven)
       run: |
-#       mvn versions:set -DnewVersion=GetHub_Action_test
         mvn test
+#       mvn versions:set -DnewVersion=GetHub_Action_test
 #    - name: Test Server
 #      run: java -jar landlords-server/target/landlords-server-GetHub_Action_test.jar -p 1024
 #    - name: Test Cilent
@@ -97,5 +97,5 @@ jobs:
           ${{ runner.os }}-maven-
     - name: Build auto-get-fu-card (with Maven)
       run: |
-#       mvn versions:set -DnewVersion=GetHub_Action_test
         mvn test
+#       mvn versions:set -DnewVersion=GetHub_Action_test
