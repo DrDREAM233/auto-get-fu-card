@@ -33,10 +33,33 @@
 
 2. 看图操作
 
-![1](https://github.com/DrDREAM233/auto-get-fu-card/raw/main/FAQ/img/iOS1.PNG)
-![2](https://github.com/DrDREAM233/auto-get-fu-card/raw/main/FAQ/img/iOS2.PNG)
-![3](https://github.com/DrDREAM233/auto-get-fu-card/raw/main/FAQ/img/iOS3.PNG)
+![1](https://github.com/DrDREAM233/auto-get-fu-card/blob/main/FAQ/iOS1.PNG?raw=true)
+![2](https://github.com/DrDREAM233/auto-get-fu-card/blob/main/FAQ/iOS2.PNG?raw=true)
+![3](https://github.com/DrDREAM233/auto-get-fu-card/blob/main/FAQ/iOS3.PNG?raw=true)
 
 3. 因为苹果的限制所以必须收到短信的时候点击运行按钮,拉下菜单就看见了
 
 
+### Step2 替换选项: Gammu (适用于树莓派等 Linux 设备)
+如果你身边有 3G/4G 模块，也可以尝试在树莓派等设备上搭建 Gammu 来实现手机上的效果。   
+
+#### 安装&配置 
+1.安装和配置 Gammu.   
+```
+sudo apt-get update && sudo apt-get install gammu
+sudo gammu-config
+```
+配置 Port 为模块的 USB 接口，然后保存设置。   
+
+2.安装和配置 Gammu-SMSD.   
+```
+sudo apt-get install gammu-smsd
+sudo nano /etc/gammu-smsdrc
+```   
+然后将 ```gammu/gammu-smsdrc``` 中的内容复制保存。   
+3.启动并测试   
+在启动前，请将 ```gammu/smsPush/main.py``` 中的相关设置修改为真实数据，例如 IP 和端口号。   
+```
+sudo gammu-smsd --config /etc/gammu-smsdrc --pid /var/run/gammu-smsd.pid --daemon
+```   
+理论上就可以尝试接收来自支付宝的验证码，领取福卡了。

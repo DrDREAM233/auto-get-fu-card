@@ -1,0 +1,19 @@
+# Configuration file for Gammu SMS Daemon
+
+# Gammu library configuration, see gammurc(5)
+[gammu]
+# Please configure this!
+port = /dev/ttyUSB2
+#port = /dev/ec20
+connection = at19200
+# Debugging
+#logformat = textall
+
+# SMSD configuration, see gammu-smsdrc(5)
+[smsd]
+service = files
+RunOnReceive = /usr/bin/python3 /home/ubuntu/auto-get-fu-card/gammu/smsPush/main.py
+#logfile = syslog
+logfile = /home/ubuntu/gammu/log/log_smsd.log
+# Increase for debugging information
+debuglevel = 0
