@@ -57,7 +57,7 @@ sudo apt-get install gammu-smsd
 sudo nano /etc/gammu-smsdrc
 ```   
 然后将 ```gammu/gammu-smsdrc``` 中的内容复制保存。   
-4.启动并测试   
+3.启动并测试   
 在启动前，请将 ```gammu/smsPush/main.py``` 中的相关设置修改为真实数据，例如 IP 和端口号。   
 ```
 sudo gammu-smsd --config /etc/gammu-smsdrc --pid /var/run/gammu-smsd.pid --daemon
