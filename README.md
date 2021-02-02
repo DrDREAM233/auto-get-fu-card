@@ -1,6 +1,8 @@
 # auto-get-fu-card
 自动领取支付宝福卡
 
+将/static/driver文件夹下的chromeDriver.exe复制到D盘根目录
+注意浏览器的版本，详见 http://npm.taobao.org/mirrors/chromedriver/
 在 ChromeHelper 的 phone 属性填上自己的手机号
 配合ios的快捷指令
     ”当收到包含‘，请勿向他人泄露您的验证码！唯一热线95188’的短信时向服务器发送post请求“
