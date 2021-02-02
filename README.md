@@ -13,7 +13,7 @@
 
 ### Step1:PC端配置
 
-1. 将`src/main/resources/static/dirver/chromedriver.exe`复制到D盘根目录`C:/`.<br>注意浏览器的版本，详见 http://npm.taobao.org/mirrors/chromedriver/
+1. 将`src/main/resources/static/dirver/chromedriver.exe`复制到D盘根目录.<br>注意浏览器的版本，从 http://npm.taobao.org/mirrors/chromedriver/下载。
 
 2. 将 `src/main/java/com/dream/autogetfucard/chromeHelper/ChromeHelper.java` 的 `phone` 属性填上自己的手机号
     ```java
@@ -68,4 +68,4 @@ sudo gammu-smsd --config /etc/gammu-smsdrc --pid /var/run/gammu-smsd.pid --daemo
 
 ### 手
 
-打开网址以后获取验证码自己往里输行了
+运行之后收到验证码自己往里输行了
