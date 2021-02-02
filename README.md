@@ -33,9 +33,9 @@
 
 2. 看图操作
 
-![1](https://github.com/DrDREAM233/auto-get-fu-card/raw/main/FAQ/img/iOS1.PNG)
-![2](https://github.com/DrDREAM233/auto-get-fu-card/raw/main/FAQ/img/iOS2.PNG)
-![3](https://github.com/DrDREAM233/auto-get-fu-card/raw/main/FAQ/img/iOS3.PNG)
+![1](https://github.com/DrDREAM233/auto-get-fu-card/blob/main/FAQ/iOS1.PNG?raw=true)
+![2](https://github.com/DrDREAM233/auto-get-fu-card/blob/main/FAQ/iOS2.PNG?raw=true)
+![3](https://github.com/DrDREAM233/auto-get-fu-card/blob/main/FAQ/iOS3.PNG?raw=true)
 
 3. 因为苹果的限制所以必须收到短信的时候点击运行按钮,拉下菜单就看见了
 
