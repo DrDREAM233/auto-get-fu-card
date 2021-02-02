@@ -4,6 +4,8 @@
 将/static/driver文件夹下的chromeDriver.exe复制到D盘根目录
 注意浏览器的版本，详见 http://npm.taobao.org/mirrors/chromedriver/
 在 ChromeHelper 的 phone 属性填上自己的手机号
+![image](https://github.com/DrDREAM233/auto-get-fu-card/blob/main/src/main/resources/static/img/%E5%BF%AB%E6%8D%B7%E6%8C%87%E4%BB%A41.PNG)
+![image](https://github.com/DrDREAM233/auto-get-fu-card/blob/main/src/main/resources/static/img/%E5%BF%AB%E6%8D%B7%E6%8C%87%E4%BB%A42.PNG)
 配合ios的快捷指令
     ”当收到包含‘，请勿向他人泄露您的验证码！唯一热线95188’的短信时向服务器发送post请求“
 即可完成基本自动化领取支付宝福卡
