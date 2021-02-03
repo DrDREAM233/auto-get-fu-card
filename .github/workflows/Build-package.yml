@@ -1,4 +1,4 @@
-name: Test_auto-get-fu-card
+name: Build auto-get-fu-card
 
 on:
   push:
