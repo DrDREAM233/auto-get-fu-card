@@ -2,16 +2,9 @@ name: Test_auto-get-fu-card
 
 on:
   push:
-        branches:
-          - master
-          - feature/*
-        paths-ignore:
-          - '**/*.md'
-          - .gitignore
-          - .editorconfig
-          - appveyor.yml
-          - 'azure-pipelines*.yml'
-          - 'ci/azure-pipelines/template*.yml'
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
         pull_request:
           branches:
