@@ -1,4 +1,4 @@
-name: Test_auto-get-fu-card
+name: Test auto-get-fu-card
 
 on:
   push:
@@ -28,8 +28,8 @@ jobs:
           mvn test
 
   Build_Linux:
-    name: Build on ubuntu
-    runs-on: ubuntu-latest
+    name: Test on ubuntu
+    runs-one ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
