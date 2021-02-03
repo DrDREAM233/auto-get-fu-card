@@ -109,7 +109,6 @@ public class ChromeHelper implements CommandLineRunner {
                 try {
                     driver.get(t);
                     TimeUnit.SECONDS.sleep(5);
-                    driver.findElement(By.className("999")).click();
                     driver.findElement(By.className("btn___SkWL1")).click();
                     driver.findElement(By.id("J-mobile")).sendKeys(PhoneNumber);
                     driver.findElement(By.className("sendCode___16OJu")).click();
