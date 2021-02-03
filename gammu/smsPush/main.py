@@ -19,6 +19,6 @@ if __name__ == "__main__":
     else:
         text = os.environ['DECODED_0_TEXT']
     if alipay_sms in text:
-        url = "http://" + Server_IP + ":" + Port + "/smg"
+        url = "http://" + Server_IP + ":" + Port + "/msg"
         data = {"msg":text}
         res = requests.post(url=url,data=data)
