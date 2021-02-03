@@ -33,7 +33,7 @@ C:\Program Files\Chrome\Application\chrome.exe
 | :------------: | :------------: |
 | PhoneNumber | 电话号码  |
 | DriverLocal | chromedriver.exe 路径 [镜像站](http://npm.taobao.org/mirrors/chromedriver/)(根据Chrome版本下载) |
-| ChromeLocal | chrome.exe 路径  |
+| ChromeLocal | chrome.exe 路径(可选参数)  |
 
 2. 启动程序
 
@@ -48,14 +48,27 @@ java -jar auto-get-fu-card.jar
 | 参数  | 备注  |
 | :------------: | :------------: |
 | -p or -phone  | 电话号码  |
-| -d or -driver | chromedriver.exe 路径  |
-| -c or -chrome | chrome.exe 路径  |
+| -d or -driver | chromedriver.exe 路径 [镜像站](http://npm.taobao.org/mirrors/chromedriver/)(根据Chrome版本下载) |
+| -c or -chrome | chrome.exe 路径(可选参数)  |
 
 示例:
 
 ```java
 java -jar auto-get-fu-card.jar -p 12345678900 -d D:\\chromedriver.exe -c C:\\Program Files\\Chrome\\Application\\chrome.exe
 ```
+
+#### 对于 macOS 和 Linux
+请注意下载适合设备系统的 chromedriver. macOS 不能与 Linux 通用。   
+请在运行前先赋予 chromedriver 权限，并尝试在 Terminal 运行一次。   
+```
+sudo chmod u+x ./chromedriver
+sudo ./chromedriver
+```
+#### 对于 macOS 用户
+在首次运行前，可能会弹出安全性警告阻止 chromedriver 运行。   
+因此，请在首次运行时在 Finder 点选 chromedriver, 按住 Control 然后双击, 在弹出的安全性警告窗口点选「打开」即可。   
+在之后的使用中，就可以直接通过 Terminal 或 Java 直接调用。
+
 
 ### Step2:手机端(能收短信的都行)配置
 
