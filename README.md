@@ -9,11 +9,16 @@
 
 因为支付宝的限制所以领完所有的福卡大约需要 1 小时
 
+## 免责声明
+
+本项目所涉及的任何代码和技术都合法合规,没有利用任何后门或漏洞,其过程完全只是代替人类输入,造成某软件对任何人的封禁一概不负责任.
+本项目所实现的功能,人类也可以完全手动实现.
+
 ## 操作步骤
 
 ### Step1:PC端配置
 
-1. 将`src/main/resources/static/dirver/chromedriver.exe`复制到D盘根目录.<br>注意浏览器的版本，从 http://npm.taobao.org/mirrors/chromedriver/下载。
+1. 将`src/main/resources/static/dirver/chromedriver.exe`复制到D盘根目录.<br>注意浏览器的版本，从 [镜像站](http://npm.taobao.org/mirrors/chromedriver/) 下载。
 
 2. 将 `src/main/java/com/dream/autogetfucard/chromeHelper/ChromeHelper.java` 的 `phone` 属性填上自己的手机号
     ```java
