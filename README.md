@@ -18,12 +18,44 @@
 
 ### Step1:PC端配置
 
-1. 将`src/main/resources/static/dirver/chromedriver.exe`复制到D盘根目录.<br>注意浏览器的版本，从 [镜像站](http://npm.taobao.org/mirrors/chromedriver/) 下载。
+```
+填写路径时一定要这样写
+C:\\Program Files\\Chrome\\Application\\chrome.exe
+而不是
+C:\Program Files\Chrome\Application\chrome.exe
+```
 
-2. 将 `src/main/java/com/dream/autogetfucard/chromeHelper/ChromeHelper.java` 的 `phone` 属性填上自己的手机号
-    ```java
-    private static final String phone = "00000000000";
-    ```
+#### A.使用配置文件
+
+1. 配置`config.properties`
+
+| Key  | 备注  |
+| :------------: | :------------: |
+| PhoneNumber | 电话号码  |
+| DriverLocal | chromedriver.exe 路径 [镜像站](http://npm.taobao.org/mirrors/chromedriver/)(根据Chrome版本下载) |
+| ChromeLocal | chrome.exe 路径  |
+
+2. 启动程序
+
+```java
+java -jar auto-get-fu-card.jar
+```
+
+注意`config.properties`和`auto-get-fu-card.jar`必须在一个文件夹下.
+
+#### B.不用配置文件,用参数
+
+| 参数  | 备注  |
+| :------------: | :------------: |
+| -p or -phone  | 电话号码  |
+| -d or -driver | chromedriver.exe 路径  |
+| -c or -chrome | chrome.exe 路径  |
+
+示例:
+
+```java
+java -jar auto-get-fu-card.jar -p 12345678900 -d D:\\chromedriver.exe -c C:\\Program Files\\Chrome\\Application\\chrome.exe
+```
 
 ### Step2:手机端(能收短信的都行)配置
 
@@ -47,11 +79,10 @@
 3. 因为苹果的限制所以必须收到短信的时候点击运行按钮,拉下菜单就看见了
 
 
-### 树莓派等 Linux 设备: Gammu
+#### 树莓派等 Linux 设备: Gammu
 如果你身边有 3G/4G 模块，也可以尝试在树莓派等设备上搭建 Gammu 来实现手机上的效果。   
 本程序已经在 Raspberry Pi 3B + Ubuntu + EC20 模块下测试通过。
 
-#### 安装&配置 
 1.安装和配置 Gammu.   
 ```
 sudo apt-get update && sudo apt-get install gammu
@@ -72,6 +103,6 @@ sudo gammu-smsd --config /etc/gammu-smsdrc --pid /var/run/gammu-smsd.pid --daemo
 ```   
 理论上就可以尝试接收来自支付宝的验证码，领取福卡了。
 
-### 手
+#### 手
 
 运行之后收到验证码自己往里输行了

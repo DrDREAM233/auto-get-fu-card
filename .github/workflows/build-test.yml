@@ -1,31 +1,10 @@
-name: Test_auto-get-fu-card
+name: Test auto-get-fu-card
 
 on:
   push:
-        branches:
-          - master
-          - feature/*
-        paths-ignore:
-          - '**/*.md'
-          - .gitignore
-          - .editorconfig
-          - appveyor.yml
-          - 'azure-pipelines*.yml'
-          - 'ci/azure-pipelines/template*.yml'
-
-        pull_request:
-          branches:
-            - master
-            - feature/*
-            - release/*
-          paths-ignore:
-            - '**/*.md'
-            - .gitignore
-            - .editorconfig
-            - appveyor.yml
-            - 'azure-pipelines*.yml'
-            - 'ci/azure-pipelines/template*.yml'
-
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 jobs:
   Build_macos:
       name: Test on macos
@@ -49,9 +28,8 @@ jobs:
           mvn test
 
   Build_Linux:
-    name: Build on ubuntu
+    name: Test on ubuntu
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
     - name: Set up JDK 1.8
