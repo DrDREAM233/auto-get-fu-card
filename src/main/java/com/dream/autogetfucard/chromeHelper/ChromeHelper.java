@@ -106,13 +106,13 @@ public class ChromeHelper implements CommandLineRunner {
             WebDriver driver = new ChromeDriver(options);
             System.out.println("started");
             Arrays.stream(urls).forEach(t -> {
+                lock.lock();
                 try {
                     driver.get(t);
                     TimeUnit.SECONDS.sleep(5);
                     driver.findElement(By.className("btn___SkWL1")).click();
                     driver.findElement(By.id("J-mobile")).sendKeys(PhoneNumber);
                     driver.findElement(By.className("sendCode___16OJu")).click();
-                    lock.lock();
                     if (condition.await(1, TimeUnit.MINUTES)) {
                         driver.findElement(By.id("J-code")).sendKeys(code);
                         driver.findElement(By.className("confirm___ZxG5p")).click();
