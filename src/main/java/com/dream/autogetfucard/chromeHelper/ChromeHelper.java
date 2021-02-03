@@ -3,6 +3,7 @@ package com.dream.autogetfucard.chromeHelper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -12,13 +13,15 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
+import static com.dream.autogetfucard.AutoGetFuCardApplication.*;
+
 /**
  * 打开浏览器的类
  */
 @Component
 public class ChromeHelper implements CommandLineRunner {
 
-    private static final String phone = "00000000000";
+    //private static final String phone = "123";
 
     public static volatile String code = "000000";
 
@@ -90,16 +93,22 @@ public class ChromeHelper implements CommandLineRunner {
         condition = lock.newCondition();
     }
 
+
+
     @Override
     public void run(String... args) {
-        System.setProperty("webdriver.chrome.driver", "D:\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", DriverLocal);
+        ChromeOptions options = new ChromeOptions();
+        options.setBinary(ChromeLocal);
+        //WebDriverException="D:\\Program Files\\CentBrowser\\Application\\chrome.exe";
+
         new Thread(() -> {
-            WebDriver driver = new ChromeDriver();
+            WebDriver driver = new ChromeDriver(options);
             System.out.println("started");
             Arrays.stream(urls).forEach(t -> {
                 driver.get(t);
                 driver.findElement(By.className("btn___SkWL1")).click();
-                driver.findElement(By.id("J-mobile")).sendKeys(phone);
+                driver.findElement(By.id("J-mobile")).sendKeys(PhoneNumber);
                 driver.findElement(By.className("sendCode___16OJu")).click();
                 lock.lock();
                 try {
