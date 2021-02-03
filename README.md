@@ -75,7 +75,7 @@ sudo ./chromedriver
 #### 目前实现平台
 
 - [x] iOS
-- [ ] Android
+- [x] Android
 - [x] 树莓派等 Linux 设备
 - [x] 手
 
@@ -107,14 +107,20 @@ sudo gammu-config
 ```
 sudo apt-get install gammu-smsd
 sudo nano /etc/gammu-smsdrc
-```   
+```
 然后将 ```gammu/gammu-smsdrc``` 中的内容复制保存。   
 3.启动并测试   
 在启动前，请将 ```gammu/smsPush/main.py``` 中的相关设置修改为真实数据，例如 IP 和端口号。   
 ```
 sudo gammu-smsd --config /etc/gammu-smsdrc --pid /var/run/gammu-smsd.pid --daemon
-```   
+```
 理论上就可以尝试接收来自支付宝的验证码，领取福卡了。
+
+### Android
+
+无脑安卓，打开后，输入服务端IP（不需要端口）。
+
+坐等验证码即可。
 
 #### 手
 
