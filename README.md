@@ -12,6 +12,7 @@
 ## 免责声明
 
 本项目所涉及的任何代码和技术都合法合规,没有利用任何后门或漏洞,其过程完全只是代替人类输入,造成某软件对任何人的封禁一概不负责任.
+
 本项目所实现的功能,人类也可以完全手动实现.
 
 ## 操作步骤
@@ -26,6 +27,12 @@ C:\Program Files\Chrome\Application\chrome.exe
 ```
 
 #### A.使用配置文件
+
+0. 前提
+
+安装JRE8并保证全局变量没问题.https://www.java.com/en/download/manual.jsp
+
+达到在cmd里输java可以返回正常信息的标准.
 
 1. 配置`config.properties`
 
@@ -58,16 +65,19 @@ java -jar auto-get-fu-card.jar -p 12345678900 -d D:\\chromedriver.exe -c C:\\Pro
 ```
 
 #### 对于 macOS 和 Linux
-请注意下载适合设备系统的 chromedriver. macOS 不能与 Linux 通用。   
-请在运行前先赋予 chromedriver 权限，并尝试在 Terminal 运行一次。   
+
+请注意下载适合设备系统的 chromedriver.
+<br>macOS 不能与 Linux 通用。   
+<br>请在运行前先赋予 chromedriver 权限，并尝试在 Terminal 运行一次。   
 ```
 sudo chmod u+x ./chromedriver
 sudo ./chromedriver
 ```
 #### 对于 macOS 用户
+
 在首次运行前，可能会弹出安全性警告阻止 chromedriver 运行。   
-因此，请在首次运行时在 Finder 点选 chromedriver, 按住 Control 然后双击, 在弹出的安全性警告窗口点选「打开」即可。   
-在之后的使用中，就可以直接通过 Terminal 或 Java 直接调用。
+<br>因此，请在首次运行时在 Finder 点选 chromedriver, 按住 Control 然后双击, 在弹出的安全性警告窗口点选「打开」即可。   
+<br>在之后的使用中，就可以直接通过 Terminal 或 Java 直接调用。
 
 
 ### Step2:手机端(能收短信的都行)配置
