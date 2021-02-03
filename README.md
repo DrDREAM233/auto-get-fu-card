@@ -81,15 +81,15 @@ sudo ./chromedriver
 
 #### iOS 10 以上版本
 
-1. 在`App Store`里安装 `快捷指令`(就是苹果官方开发的那个)
+1.在`App Store`里安装 `快捷指令`(就是苹果官方开发的那个)
 
-2. 看图操作
+2.看图操作
 
-![1](https://github.com/DrDREAM233/auto-get-fu-card/blob/main/FAQ/iOS1.PNG?raw=true)
-![2](https://github.com/DrDREAM233/auto-get-fu-card/blob/main/FAQ/iOS2.PNG?raw=true)
-![3](https://github.com/DrDREAM233/auto-get-fu-card/blob/main/FAQ/iOS3.PNG?raw=true)
+<img src="https://i.loli.net/2021/02/03/Kktg6F1lDxzULuE.png" alt="drawing" width="300"/>
+<img src="https://i.loli.net/2021/02/03/vDAaS6d12sBZLkm.png" alt="drawing" width="300"/>
+<img src="https://i.loli.net/2021/02/03/7an5sMoEYhkK61H.png" alt="drawing" width="300"/>
 
-3. 因为苹果的限制所以必须收到短信的时候点击运行按钮,拉下菜单就看见了
+3.因为苹果的限制所以必须收到短信的时候点击运行按钮,拉下菜单就看见了
 
 
 #### 树莓派等 Linux 设备: Gammu
